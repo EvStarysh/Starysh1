@@ -20,16 +20,25 @@ public class StaryshTest {
         driver.get("https://market.yandex.ru/");
         driver.manage().window().maximize();
 
-        WebElement katalog = driver.findElement(By.xpath("//div[@data-zone-name='catalog']"));
-        katalog.click();
+        WebElement сatalog = driver.findElement(By.xpath("//div[@data-zone-name='catalog']"));
+        сatalog.click();
 
         WebElement smart = (new WebDriverWait(driver, Duration.ofSeconds(2))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='Смартфоны']"))));
         smart.click();
 
-        WebElement cenado = (new WebDriverWait(driver, Duration.ofSeconds(2))
+        WebElement priceMax = (new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[label[text()='Цена, ₽ до']]//input[@type='text']"))));
-        cenado.sendKeys("20000", Keys.ENTER);
+        priceMax.sendKeys("20000");
+
+        WebElement fieldMin = driver.findElement(By.xpath("//span[label[text()='Диагональ экрана (точно), \" от']]//input[@type='text']"));
+        fieldMin.sendKeys("3", Keys.ENTER);
+
+        WebElement checkbox1 = (new WebDriverWait(driver, Duration.ofSeconds(2))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[1]"))));
+        checkbox1.click();
+
+
 
 
     }
