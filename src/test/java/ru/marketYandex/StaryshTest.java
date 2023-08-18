@@ -38,8 +38,17 @@ public class StaryshTest {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[1]"))));
         checkbox1.click();
 
+        WebElement checkbox2 = driver.findElement(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[2]"));
+        checkbox2.click();
 
+        WebElement checkbox3 = driver.findElement(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[3]"));
+        checkbox3.click();
 
+        WebElement checkbox4 = driver.findElement(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[4]"));
+        checkbox4.click();
+
+        WebElement checkbox5 = driver.findElement(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[5]"));
+        checkbox5.click();
 
     }
 
