@@ -28,7 +28,7 @@ public class StaryshTest {
         smart.click();
 
         WebElement cenado = (new WebDriverWait(driver, Duration.ofSeconds(2))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//label[text()='Цена, ₽ до']"))));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[label[text()='Цена, ₽ до']]//input[@type='text']"))));
         cenado.sendKeys("20000", Keys.ENTER);
 
 
