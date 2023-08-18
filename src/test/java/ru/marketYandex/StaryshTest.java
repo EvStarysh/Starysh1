@@ -20,8 +20,8 @@ public class StaryshTest {
         driver.get("https://market.yandex.ru/");
         driver.manage().window().maximize();
 
-        WebElement сatalog = driver.findElement(By.xpath("//div[@data-zone-name='catalog']"));
-        сatalog.click();
+        WebElement catalog = driver.findElement(By.xpath("//div[@data-zone-name='catalog']"));
+        catalog.click();
 
         WebElement smart = (new WebDriverWait(driver, Duration.ofSeconds(2))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='Смартфоны']"))));
