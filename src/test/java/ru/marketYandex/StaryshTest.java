@@ -34,7 +34,7 @@ public class StaryshTest {
         WebElement fieldMin = driver.findElement(By.xpath("//span[label[text()='Диагональ экрана (точно), \" от']]//input[@type='text']"));
         fieldMin.sendKeys("3", Keys.ENTER);
 
-        WebElement checkbox1 = driver.findElement(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[1]"));
+        WebElement checkbox1 = driver.findElement(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//span)[3]"));
         checkbox1.click();
 
         WebElement checkbox2 = driver.findElement(By.xpath("(//div[contains(@data-zone-data, 'Производитель')]//label)[2]"));
